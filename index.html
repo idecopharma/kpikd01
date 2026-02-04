@@ -301,9 +301,9 @@
                             <td><input class="kpi4-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
                             <td><textarea class="kpi4-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
                         </tr>
-					
-					
-					</tbody>
+                    
+                    
+                    </tbody>
                     <tfoot>
                         <tr>
                             <td colspan="3" class="text-right font-bold">Tổng điểm KPI bảng 4:</td>
@@ -320,6 +320,47 @@
             </div>
         </div>
         <!-- END BẢNG 4 -->
+
+        <!-- PHẦN XÁC NHẬN VÀ PHÊ DUYỆT -->
+        <div class="bg-white mt-12 mb-8 p-6 rounded-lg border border-gray-300 shadow-md">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">XÁC NHẬN VÀ PHÊ DUYỆT</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Người được đánh giá -->
+                <div class="border border-gray-300 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold text-blue-700 mb-4">XÁC NHẬN CỦA NGƯỜI ĐƯỢC ĐÁNH GIÁ</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="employeeName" class="block text-sm font-medium text-gray-700 mb-1">Họ và tên:</label>
+                            <input type="text" id="employeeName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="employeeDate" class="block text-sm font-medium text-gray-700 mb-1">Ngày ký:</label>
+                            <input type="date" id="employeeDate" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quản lý phê duyệt -->
+                <div class="border border-gray-300 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold text-green-700 mb-4">PHÊ DUYỆT CỦA QUẢN LÝ</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="managerName" class="block text-sm font-medium text-gray-700 mb-1">Họ và tên:</label>
+                            <input type="text" id="managerName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label for="managerPosition" class="block text-sm font-medium text-gray-700 mb-1">Chức vụ:</label>
+                            <input type="text" id="managerPosition" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label for="managerDate" class="block text-sm font-medium text-gray-700 mb-1">Ngày phê duyệt:</label>
+                            <input type="date" id="managerDate" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- QUY ĐỊNH THƯỞNG KPI -->
         <div class="mt-4 p-6 border border-dashed border-green-500 bg-green-50 rounded-xl shadow-sm mb-8">
@@ -619,6 +660,13 @@ function saveKpiData() {
     const department = document.getElementById('department').value.trim();
     const creationDate = document.getElementById('creationDate').value;
     
+    // Lấy dữ liệu xác nhận
+    const employeeName = document.getElementById('employeeName').value.trim();
+    const employeeDate = document.getElementById('employeeDate').value;
+    const managerName = document.getElementById('managerName').value.trim();
+    const managerPosition = document.getElementById('managerPosition').value.trim();
+    const managerDate = document.getElementById('managerDate').value;
+    
     if (!creatorName || !department || !creationDate) {
         alert('Vui lòng nhập đầy đủ Tên người lập, Bộ phận và Ngày lập.');
         return false;
@@ -680,6 +728,11 @@ function saveKpiData() {
         creatorName,
         department,
         creationDate,
+        employeeName,
+        employeeDate,
+        managerName,
+        managerPosition,
+        managerDate,
         kpiRows: kpiRowsData,
         kpi2Data,
         kpi3Data,
@@ -781,6 +834,13 @@ function loadKpiToForm(kpiId) {
             document.getElementById('department').value = kpi.department;
             document.getElementById('creationDate').value = kpi.creationDate;
             
+            // Điền thông tin xác nhận
+            document.getElementById('employeeName').value = kpi.employeeName || '';
+            document.getElementById('employeeDate').value = kpi.employeeDate || '';
+            document.getElementById('managerName').value = kpi.managerName || '';
+            document.getElementById('managerPosition').value = kpi.managerPosition || '';
+            document.getElementById('managerDate').value = kpi.managerDate || '';
+            
             // Tải bảng 1
             kpiTable1Body.innerHTML = '';
             rowCounter = 0;
@@ -849,6 +909,13 @@ function resetMainForm() {
     document.getElementById('department').value = '';
     document.getElementById('creationDate').valueAsDate = new Date();
     
+    // Reset phần xác nhận
+    document.getElementById('employeeName').value = '';
+    document.getElementById('employeeDate').value = '';
+    document.getElementById('managerName').value = '';
+    document.getElementById('managerPosition').value = '';
+    document.getElementById('managerDate').valueAsDate = new Date();
+    
     kpiTable1Body.innerHTML = '';
     rowCounter = 0;
     addKpiRow();
@@ -913,6 +980,13 @@ exportHtmlBtn.onclick = function() {
     const department = document.getElementById('department').value.trim();
     const creationDate = document.getElementById('creationDate').value;
     
+    // Lấy thông tin xác nhận
+    const employeeName = document.getElementById('employeeName').value.trim();
+    const employeeDate = document.getElementById('employeeDate').value;
+    const managerName = document.getElementById('managerName').value.trim();
+    const managerPosition = document.getElementById('managerPosition').value.trim();
+    const managerDate = document.getElementById('managerDate').value;
+    
     if (!creatorName || !department || !creationDate) {
         alert('Vui lòng nhập đủ thông tin trước khi xuất HTML!');
         return;
@@ -946,6 +1020,8 @@ exportHtmlBtn.onclick = function() {
         .total-score .value { font-size: 3em; font-weight: bold; margin: 10px 0; }
         .section-title { color: #4f46e5; border-left: 5px solid #4f46e5; padding-left: 15px; margin: 25px 0 15px 0; }
         .regulation-box { background: #f0fff0; border: 2px dashed #22c55e; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .signature-box { border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin: 20px 0; background: #f8f9fa; }
+        .signature-box h3 { color: #4f46e5; margin-bottom: 15px; }
         .footer { text-align: center; margin-top: 40px; color: #888; font-size: 0.9em; }
     </style>
 </head>
@@ -1102,6 +1178,19 @@ exportHtmlBtn.onclick = function() {
             </div>
         </div>
         
+        <div class="signature-box">
+            <h3>XÁC NHẬN CỦA NGƯỜI ĐƯỢC ĐÁNH GIÁ</h3>
+            <p><strong>Họ và tên:</strong> ${employeeName || 'Chưa ký'}</p>
+            <p><strong>Ngày ký:</strong> ${employeeDate || 'Chưa có ngày'}</p>
+        </div>
+        
+        <div class="signature-box">
+            <h3>PHÊ DUYỆT CỦA QUẢN LÝ</h3>
+            <p><strong>Họ và tên:</strong> ${managerName || 'Chưa ký'}</p>
+            <p><strong>Chức vụ:</strong> ${managerPosition || 'Chưa có chức vụ'}</p>
+            <p><strong>Ngày phê duyệt:</strong> ${managerDate || 'Chưa có ngày'}</p>
+        </div>
+        
         <div class="regulation-box">
             <h3>QUY ĐỊNH THƯỞNG KPI</h3>
             <div>${document.querySelector('.border-green-500.bg-green-50').innerHTML}</div>
@@ -1140,6 +1229,8 @@ document.addEventListener('DOMContentLoaded', () => {
     calculateAllScores();
     openModal();
     document.getElementById('creationDate').valueAsDate = new Date();
+    document.getElementById('employeeDate').valueAsDate = new Date();
+    document.getElementById('managerDate').valueAsDate = new Date();
     
     // Thêm sự kiện tính điểm tự động
     document.querySelectorAll('#kpiTable2 .kpi2-evaluation').forEach(input => {
@@ -1173,8 +1264,3 @@ window.onclick = function(event) {
 </script>
 </body>
 </html>
-
-
-
-
-
