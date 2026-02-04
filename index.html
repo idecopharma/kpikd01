@@ -162,7 +162,7 @@
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Tỉ lệ tổng doanh thu do bạn lập đơn kỳ này so với kỳ tháng trước ( không gồm trong chuỗi NT :Long Châu hay Pharmacity) </td>
+                            <td>Tỉ lệ tổng doanh thu do bạn lập đơn kỳ này so với kỳ tháng trước ( không gồm trong chuỗi NT :Long Châu hay Pharmacity ) </td>
                             <td>Đạt từ 17% đến 35%</td>
                             <td class="kpi2-score kpi-score-display">25%</td>
                             <td><input class="kpi2-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
@@ -280,28 +280,20 @@
                         <tr>
                             <td>1</td>
                             <td><b style="color:green;">Doanh thu nhóm không phải thuốc kỳ so kỳ trước </b></td>
-                            <td>Từ - 5%  đến 10%</td>
-                            <td class="kpi4-score kpi-score-display">5%</td>
+                            <td>Từ - 2%  đến 15%</td>
+                            <td class="kpi4-score kpi-score-display">10%</td>
                             <td><input class="kpi4-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
                             <td><textarea class="kpi4-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td><b style="color:green;">Doanh thu nhóm không phải thuốc kỳ này so ký trước</b></td>
-                            <td> Từ 11% </td>
+                            <td> Từ 16% </td>
                             <td class="kpi4-score kpi-score-display" style="color:red;font-weight:bold;">25%</td>
                             <td><input class="kpi4-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
                             <td><textarea class="kpi4-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
                         </tr>
-                    <tr>
-                            <td>3</td>
-                            <td><b style="color:green;">Phát triển thành công khách hàng mới đặt nhóm không phải thuốc trong kỳ</b></td>
-                            <td> Từ 2 khách hàng/ thàng  </td>
-                            <td class="kpi4-score kpi-score-display" style="color:red;font-weight:bold;">30%</td>
-                            <td><input class="kpi4-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
-                            <td><textarea class="kpi4-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
-                        </tr>
-                    
+                                       
                     
                     </tbody>
                     <tfoot>
@@ -360,13 +352,41 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- KHUNG GHI CHÚ ĐÁNH GIÁ CỦA QUẢN LÝ -->
+            <div class="mt-8 border border-yellow-300 p-6 rounded-lg bg-yellow-50">
+                <h3 class="text-lg font-semibold text-yellow-700 mb-4">GHI CHÚ ĐÁNH GIÁ CỦA QUẢN LÝ</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label for="managerComment" class="block text-sm font-medium text-gray-700 mb-2">Nhận xét, đánh giá của quản lý:</label>
+                        <textarea id="managerComment" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500" placeholder="Nhập nhận xét, đánh giá của quản lý về kết quả KPI..."></textarea>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="strengths" class="block text-sm font-medium text-gray-700 mb-2">Điểm mạnh:</label>
+                            <textarea id="strengths" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500" placeholder="Liệt kê các điểm mạnh..."></textarea>
+                        </div>
+                        <div>
+                            <label for="improvements" class="block text-sm font-medium text-gray-700 mb-2">Điểm cần cải thiện:</label>
+                            <textarea id="improvements" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500" placeholder="Liệt kê các điểm cần cải thiện..."></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="recommendations" class="block text-sm font-medium text-gray-700 mb-2">Đề xuất/Khuyến nghị:</label>
+                        <textarea id="recommendations" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Đề xuất cho kỳ tiếp theo..."></textarea>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="confirmedByManager" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                        <label for="confirmedByManager" class="ml-2 block text-sm text-gray-700">Tôi xác nhận đã đánh giá và phê duyệt báo cáo KPI này</label>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- QUY ĐỊNH THƯỞNG KPI -->
         <div class="mt-4 p-6 border border-dashed border-green-500 bg-green-50 rounded-xl shadow-sm mb-8">
             <div class="font-semibold mb-4 text-green-700 text-lg">QUY ĐỊNH THƯỞNG KPI - TÍNH THƯỞNG HOA HỒNG</div>
             <div class="text-gray-700 leading-relaxed">
-                <!-- Nội dung quy định thưởng giữ nguyên -->
                 <p><b>ĐIỂM KPI TĂNG SẼ TĂNG THU NHẬP TÍNH ĐIỂM KPI - KPI CÓ THỂ HƠN 100% ĐIỂM CHUẨN</b></p><br>
                 <p><b>1. Nhóm Thuốc:</b></p>
                 <p>- Thành công 1 Nhà thuốc cho thuốc có tổng giá trị đặt hàng tối thiểu <b style="color: #e74c3c;"> từ 3 triệu đồng</b> - thưởng <b style="color: #e74c3c;">200,000 đồng/nhà thuốc</b>.</p>
@@ -667,6 +687,13 @@ function saveKpiData() {
     const managerPosition = document.getElementById('managerPosition').value.trim();
     const managerDate = document.getElementById('managerDate').value;
     
+    // Lấy dữ liệu ghi chú quản lý
+    const managerComment = document.getElementById('managerComment').value.trim();
+    const strengths = document.getElementById('strengths').value.trim();
+    const improvements = document.getElementById('improvements').value.trim();
+    const recommendations = document.getElementById('recommendations').value.trim();
+    const confirmedByManager = document.getElementById('confirmedByManager').checked;
+    
     if (!creatorName || !department || !creationDate) {
         alert('Vui lòng nhập đầy đủ Tên người lập, Bộ phận và Ngày lập.');
         return false;
@@ -733,6 +760,11 @@ function saveKpiData() {
         managerName,
         managerPosition,
         managerDate,
+        managerComment,
+        strengths,
+        improvements,
+        recommendations,
+        confirmedByManager,
         kpiRows: kpiRowsData,
         kpi2Data,
         kpi3Data,
@@ -841,6 +873,13 @@ function loadKpiToForm(kpiId) {
             document.getElementById('managerPosition').value = kpi.managerPosition || '';
             document.getElementById('managerDate').value = kpi.managerDate || '';
             
+            // Điền thông tin ghi chú quản lý
+            document.getElementById('managerComment').value = kpi.managerComment || '';
+            document.getElementById('strengths').value = kpi.strengths || '';
+            document.getElementById('improvements').value = kpi.improvements || '';
+            document.getElementById('recommendations').value = kpi.recommendations || '';
+            document.getElementById('confirmedByManager').checked = kpi.confirmedByManager || false;
+            
             // Tải bảng 1
             kpiTable1Body.innerHTML = '';
             rowCounter = 0;
@@ -916,6 +955,13 @@ function resetMainForm() {
     document.getElementById('managerPosition').value = '';
     document.getElementById('managerDate').valueAsDate = new Date();
     
+    // Reset ghi chú quản lý
+    document.getElementById('managerComment').value = '';
+    document.getElementById('strengths').value = '';
+    document.getElementById('improvements').value = '';
+    document.getElementById('recommendations').value = '';
+    document.getElementById('confirmedByManager').checked = false;
+    
     kpiTable1Body.innerHTML = '';
     rowCounter = 0;
     addKpiRow();
@@ -986,6 +1032,13 @@ exportHtmlBtn.onclick = function() {
     const managerName = document.getElementById('managerName').value.trim();
     const managerPosition = document.getElementById('managerPosition').value.trim();
     const managerDate = document.getElementById('managerDate').value;
+    
+    // Lấy thông tin ghi chú quản lý
+    const managerComment = document.getElementById('managerComment').value.trim();
+    const strengths = document.getElementById('strengths').value.trim();
+    const improvements = document.getElementById('improvements').value.trim();
+    const recommendations = document.getElementById('recommendations').value.trim();
+    const confirmedByManager = document.getElementById('confirmedByManager').checked;
     
     if (!creatorName || !department || !creationDate) {
         alert('Vui lòng nhập đủ thông tin trước khi xuất HTML!');
@@ -1189,6 +1242,15 @@ exportHtmlBtn.onclick = function() {
             <p><strong>Họ và tên:</strong> ${managerName || 'Chưa ký'}</p>
             <p><strong>Chức vụ:</strong> ${managerPosition || 'Chưa có chức vụ'}</p>
             <p><strong>Ngày phê duyệt:</strong> ${managerDate || 'Chưa có ngày'}</p>
+        </div>
+        
+        <div class="signature-box" style="background-color: #fffdf0; border-color: #fbbf24;">
+            <h3 style="color: #d97706;">GHI CHÚ ĐÁNH GIÁ CỦA QUẢN LÝ</h3>
+            <p><strong>Nhận xét, đánh giá:</strong> ${managerComment || 'Không có nhận xét'}</p>
+            <p><strong>Điểm mạnh:</strong> ${strengths || 'Không có'}</p>
+            <p><strong>Điểm cần cải thiện:</strong> ${improvements || 'Không có'}</p>
+            <p><strong>Đề xuất/Khuyến nghị:</strong> ${recommendations || 'Không có'}</p>
+            <p><strong>Xác nhận đánh giá:</strong> ${confirmedByManager ? 'ĐÃ XÁC NHẬN' : 'CHƯA XÁC NHẬN'}</p>
         </div>
         
         <div class="regulation-box">
