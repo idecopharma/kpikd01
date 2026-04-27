@@ -155,35 +155,42 @@
                         <tr>
                             <td>2</td>
                             <td>Tỉ lệ tổng doanh thu do bạn lập đơn kỳ này  so với kỳ tháng trước </td>
-                            <td>Đạt từ -4 % đến 16%</td>
-                            <td class="kpi2-score kpi-score-display">10%</td>
+                            <td>Đạt từ -4 % đến 10%</td>
+                            <td class="kpi2-score kpi-score-display">5%</td>
                             <td><input class="kpi2-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
                             <td><textarea class="kpi2-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>Tỉ lệ tổng doanh thu do bạn lập đơn kỳ này so với kỳ tháng trước  </td>
-                            <td>Đạt từ 17% </td>
-                            <td class="kpi2-score kpi-score-display">20%</td>
+                            <td>Đạt từ 11% </td>
+                            <td class="kpi2-score kpi-score-display">15%</td>
                             <td><input class="kpi2-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
                             <td><textarea class="kpi2-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
                         </tr>
-                                         
-                                            
+                                      
+                                     
+                                              
                         
-                        <tr>
+                        <tr id="row6Container">
                             <td>4</td>
-                            <td>Tỉ lệ khách hàng mới - tính cả chào sản phẩm mới  cho khách hàng cũ thành công có đơn/kỳ   </td>
-                            <td>tăng từ 5 % -15 % trở lên</td>
-                            <td class="kpi2-score kpi-score-display" style="color:red;font-weight:bold;">10%</td>
-                            <td><input class="kpi2-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
-                            <td><textarea class="kpi2-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Tỉ lệ khách hàng mới - tính cả sản phẩm chào mới thành công khách hàng cũ thàng công có đơn / kỳ </td>
-                            <td> Tăng trưởng trên 15% </td>
-                            <td class="kpi2-score kpi-score-display" style="color:red;font-weight:bold;"> 25%</td>
+                            <td>
+                                <div style="margin-bottom: 8px;"><b style="color:#b91c1c;">Doanh thu cá nhân phụ trách lập đơn hàng (không gồm CNT)</b></div>
+                                <div style="background:#fef3c7; padding:10px; border-radius:6px; border:1px solid #f59e0b;">
+                                    <label for="row6CustomerCount" style="display:block; font-size:0.85em; color:#92400e; font-weight:600; margin-bottom:4px;">Số lượng khách hàng (không gồm chuỗi NT lớn giao):</label>
+                                    <input type="number" id="row6CustomerCount" class="kpi2-customer-count border rounded-md p-2 w-full" min="0" value="60" placeholder="VD: 60">
+                                    <div style="font-size:0.85em; color:#4b5563; margin-top:6px; line-height:1.5;">
+                                        → Mục tiêu tối thiểu 40%số khách hàng có đơn: <b id="row6TargetCustomers" style="color:#b91c1c;">24</b> khách hàng × 3,5 triệu đ/KH/tháng
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="font-weight:bold; color:#059669; font-size:1.05em;">
+                                    <span id="row6TargetRevenue">84.000.000</span> đ
+                                </div>
+                                <div style="font-size:0.78em; color:#6b7280; margin-top:4px; font-style:italic;">(Tự động tính từ SLKH)</div>
+                            </td>
+                            <td class="kpi2-score kpi-score-display">25%</td>
                             <td><input class="kpi2-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
                             <td><textarea class="kpi2-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
                         </tr>
@@ -224,27 +231,20 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Tỉ lệ khách hàng lập đơn / tổng khách hàng giao quản lý và phát triển mới  ( tính trên ERP dữ liệu) </td>
-                            <td> Đạt từ 10% trở lên </td>
+                            <td>Tỉ lệ khách hàng lập đơn / tổng khách hàng giao quản lý và phát triển mới  ( tính trên ERP dữ liệu) </td>
+                            <td> Đạt từ 10% trở lên </td>
                             <td class="kpi3-score kpi-score-display">5%</td>
                             <td><input class="kpi3-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
                             <td><textarea class="kpi3-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Tỉ lệ khách hàng lập đơn/tổng khách hàng giao quản lý - phát triển mới</td>
-                            <td> Đạt trên 30% </td>
-                            <td class="kpi3-score kpi-score-display"> 15%</td>
+                            <td>Tỉ lệ khách hàng lập đơn/tổng khách hàng giao quản lý - phát triển mới</td>
+                            <td> Đạt trên 35% </td>
+                            <td class="kpi3-score kpi-score-display"> 20%</td>
                             <td><input class="kpi3-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
                             <td><textarea class="kpi3-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
-                        </tr>
-                            <td>3</td>
-                            <td>Tỉ lệ khách hàng lập đơn/tổng khách hàng giao quản lý - phát triển mới</td>
-                            <td>Trên 65% khách hàng/kỳ</td>
-                            <td class="kpi3-score kpi-score-display">30%</td>
-                            <td><input class="kpi3-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
-                            <td><textarea class="kpi3-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
-                        </tr>
+                       
                     </tbody>
                     <tfoot>
                         <tr>
@@ -282,16 +282,16 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td><b style="color:green;">Phát triển thành công  khách hàng phân phối nhóm không phải thuốc </b></td>
-                            <td> ít nhất 1 Nhà phân phối có đơn hàng hay chốt tác</td>
-                            <td class="kpi4-score kpi-score-display"> 30%</td>
+                            <td><b style="color:green;">Phát triển thành công  khách hàng phân phối nhóm không phải thuốc </b></td>
+                            <td> ít nhất 1 Nhà phân phối có đơn hàng hay chốt tác</td>
+                            <td class="kpi4-score kpi-score-display"> 20%</td>
                             <td><input class="kpi4-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
                             <td><textarea class="kpi4-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td><b style="color:green;">Phát triển thành công khách hàng bất kỳ có   đặt hàng UVS SILICONE hay UVS Nailcare bất ký có đơn hàng </b></td>
-                            <td> Từ ít nhất 1 khách hàng mới bất kỳ có đơn hàng tối thiểu 1 triêu đồng/ trong kỳ/sản phẩm </td>
+                            <td><b style="color:green;">Phát triển thành công khách hàng bất kỳ có   đặt hàng UVS SILICONE hay UVS Nailcare bất ký có đơn hàng </b></td>
+                            <td> Từ ít nhất 1 khách hàng mới bất kỳ có đơn hàng tối thiểu 1 triêu đồng/ trong kỳ/sản phẩm </td>
                             <td class="kpi4-score kpi-score-display" style="color:red;font-weight:bold;">20%</td>
                             <td><input class="kpi4-evaluation score-input border rounded-md p-2" type="number" min="0" max="100" value="0"></td>
                             <td><textarea class="kpi4-report w-full border rounded-md p-2" rows="2">Em tự đánh giá</textarea></td>
@@ -393,7 +393,7 @@
                 <p><b>ĐIỂM KPI TĂNG SẼ TĂNG THU NHẬP TÍNH ĐIỂM KPI - KPI CÓ THỂ HƠN 100% ĐIỂM CHUẨN</b></p><br>
                 <p><b>1. Nhóm Thuốc:</b></p>
                 <p>- Thành công 1 Nhà thuốc cho thuốc có tổng giá trị đặt hàng tối thiểu <b style="color: #e74c3c;"> từ 3 triệu đồng</b> - thưởng <b style="color: #e74c3c;">200,000 đồng/nhà thuốc</b>.</p>
-                <p>- Giới thiệu 1 sản phẩm THUỐC mới vào khách hàng đang hợp tác chốt thành công có đơn hàng từ <b style="color: #e74c3c;"> từ 1 triệu đồng /sản phẩm mới </b> - thưởng <b style="color: #e74c3c;">100,000 đồng/1 sản phẩm</b>.</p>
+                <p>- Giới thiệu 1 sản phẩm THUỐC mới vào khách hàng đang hợp tác chốt thành công có đơn hàng từ <b style="color: #e74c3c;"> từ 1 triệu đồng /sản phẩm mới </b> - thưởng <b style="color: #e74c3c;">100,000 đồng/1 sản phẩm</b>.</p>
                 <p><b>2. Nhóm Không Thuốc:</b></p>
                 <p>- Thành công 1 Nhà thuốc cho nhóm không thuốc có tổng giá trị đặt hàng từ <b style="color: #e74c3c;">3 triệu đồng</b> - thưởng <b style="color: #e74c3c;">400,000 đồng/nhà thuốc</b>.</p>
                 <p>- Giới thiệu 1 sản phẩm UVS mới vào khách hàng đang hợp tác chốt thành công có đơn hàng từ <b style="color: #e74c3c;"> từ 1 triệu đồng</b> - thưởng <b style="color: #e74c3c;">200,000 đồng/1 sản phẩm</b>.</p>
@@ -677,6 +677,22 @@ function calculateAllScores() {
     };
 }
 
+// ========== HÀM TỰ ĐỘNG TÍNH MỤC TIÊU DÒNG 6 BẢNG 2 ==========
+// Công thức: Mục tiêu KH = 40% × SLKH; Doanh thu mục tiêu = Mục tiêu KH × 3.500.000 đ
+function updateRow6Targets() {
+    const cntInput = document.getElementById('row6CustomerCount');
+    const targetCustEl = document.getElementById('row6TargetCustomers');
+    const targetRevEl = document.getElementById('row6TargetRevenue');
+    if (!cntInput || !targetCustEl || !targetRevEl) return;
+
+    const customerCount = parseInt(cntInput.value) || 0;
+    const targetCustomers = Math.floor(customerCount * 0.4);
+    const targetRevenue = targetCustomers * 3500000;
+
+    targetCustEl.textContent = targetCustomers;
+    targetRevEl.textContent = targetRevenue.toLocaleString('vi-VN');
+}
+
 // ========== LƯU DỮ LIỆU KPI ==========
 function saveKpiData() {
     const creatorName = document.getElementById('creatorName').value.trim();
@@ -721,9 +737,11 @@ function saveKpiData() {
     // Thu thập dữ liệu bảng 2
     const kpi2Data = [];
     document.querySelectorAll('#kpiTable2 tbody tr').forEach((row, index) => {
+        const ccInput = row.querySelector('.kpi2-customer-count');
         kpi2Data.push({
             evaluation: row.querySelector('.kpi2-evaluation').value,
-            report: row.querySelector('.kpi2-report').value
+            report: row.querySelector('.kpi2-report').value,
+            customerCount: ccInput ? ccInput.value : null
         });
     });
     
@@ -897,6 +915,14 @@ function loadKpiToForm(kpiId) {
                 document.querySelectorAll('#kpiTable2 .kpi2-report').forEach((textarea, index) => {
                     if (kpi.kpi2Data[index]) textarea.value = kpi.kpi2Data[index].report;
                 });
+                // Tải số lượng khách hàng (dòng 6) và tính lại mục tiêu
+                document.querySelectorAll('#kpiTable2 tbody tr').forEach((row, index) => {
+                    const ccInput = row.querySelector('.kpi2-customer-count');
+                    if (ccInput && kpi.kpi2Data[index] && kpi.kpi2Data[index].customerCount != null) {
+                        ccInput.value = kpi.kpi2Data[index].customerCount;
+                    }
+                });
+                updateRow6Targets();
             }
             
             // Tải bảng 3
@@ -974,6 +1000,10 @@ function resetMainForm() {
     // Reset bảng 2
     document.querySelectorAll('#kpiTable2 .kpi2-evaluation').forEach(input => input.value = '0');
     document.querySelectorAll('#kpiTable2 .kpi2-report').forEach(textarea => textarea.value = 'Em tự đánh giá');
+    // Reset số lượng khách hàng dòng 6 về giá trị mặc định
+    const row6Cnt = document.getElementById('row6CustomerCount');
+    if (row6Cnt) row6Cnt.value = '60';
+    updateRow6Targets();
     
     // Reset bảng 3
     document.querySelectorAll('#kpiTable3 .kpi3-evaluation').forEach(input => input.value = '0');
@@ -1148,7 +1178,29 @@ exportHtmlBtn.onclick = function() {
                 </tr>
             </thead>
             <tbody>
-                ${Array.from(document.querySelectorAll('#kpiTable2 tbody tr')).map((row, index) => `
+                ${Array.from(document.querySelectorAll('#kpiTable2 tbody tr')).map((row, index) => {
+                    // Dòng 6: hiển thị thông tin doanh thu cá nhân phụ trách lập đơn hàng
+                    if (row.querySelector('.kpi2-customer-count')) {
+                        const cnt = parseInt(row.querySelector('.kpi2-customer-count').value) || 0;
+                        const tgtCust = Math.floor(cnt * 0.4);
+                        const tgtRev = (tgtCust * 3500000).toLocaleString('vi-VN');
+                        const kpiPct = row.cells[3].innerHTML.replace(/<[^>]+>/g, '').trim();
+                        const evalVal = row.querySelector('.kpi2-evaluation').value || '0';
+                        const repVal = row.querySelector('.kpi2-report').value || '';
+                        return `
+                <tr>
+                    <td>${index + 1}</td>
+                    <td><b>A.6 Doanh thu cá nhân phụ trách lập đơn hàng (không gồm CNT)</b><br>
+                        Số lượng khách hàng (không gồm chuỗi NT lớn giao): <b>${cnt}</b><br>
+                        → Mục tiêu tối thiểu (40%): <b>${tgtCust}</b> khách hàng × 3,5 triệu đ/KH/tháng
+                    </td>
+                    <td><b style="color:#059669;">${tgtRev} đ</b><br><span style="font-size:0.85em; color:#6b7280;">(Tự động tính)</span></td>
+                    <td class="score-display">${kpiPct}</td>
+                    <td class="score-display">${evalVal}</td>
+                    <td>${repVal}</td>
+                </tr>`;
+                    }
+                    return `
                 <tr>
                     <td>${index + 1}</td>
                     <td>${row.cells[1].innerHTML.replace(/<[^>]+>/g, '')}</td>
@@ -1156,8 +1208,8 @@ exportHtmlBtn.onclick = function() {
                     <td class="score-display">${row.cells[3].innerHTML.replace(/<[^>]+>/g, '')}</td>
                     <td class="score-display">${row.querySelector('.kpi2-evaluation').value || '0'}</td>
                     <td>${row.querySelector('.kpi2-report').value || ''}</td>
-                </tr>
-                `).join('')}
+                </tr>`;
+                }).join('')}
             </tbody>
         </table>
         
@@ -1301,6 +1353,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('#kpiTable2 .kpi2-evaluation').forEach(input => {
         input.addEventListener('input', calculateAllScores);
     });
+
+    // Sự kiện cho ô nhập số lượng khách hàng dòng 6 → tự động tính mục tiêu
+    const row6CntInput = document.getElementById('row6CustomerCount');
+    if (row6CntInput) {
+        row6CntInput.addEventListener('input', updateRow6Targets);
+        updateRow6Targets(); // Tính lần đầu khi tải trang
+    }
     
     document.querySelectorAll('#kpiTable3 .kpi3-evaluation').forEach(input => {
         input.addEventListener('input', calculateAllScores);
